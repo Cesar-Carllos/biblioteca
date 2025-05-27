@@ -53,4 +53,4 @@ Este projeto é um **Sistema de Biblioteca Virtual** desenvolvido com **HTML, CS
   - Autenticação de usuários
   - Funcionalidades avançadas de busca e relatórios
 
-👉 <a href="https://cesar-carllos-biblioteca.netlify.app/" target="_blank">Clique aqui para testar</a>
+👉 [Clique aqui para testar](https://cesar-carllos-biblioteca.netlify.app/)
