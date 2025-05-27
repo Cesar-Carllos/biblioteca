@@ -12,13 +12,13 @@ Este projeto é um **Sistema de Biblioteca Virtual** desenvolvido com **HTML, CS
 - **Cadastro de Livros**  
   Registro de informações como título, autor, editora e ano de publicação.
 
+- **Cadastro de Alunos**  
+ Gestão dos alunos que utilizam os serviços da biblioteca.
+
 ## 🔄 Funcionalidades em desenvolvimento
 
 - **Cadastro de Usuários**  
   Inclusão de usuários com seus respectivos dados para controle de acesso ou empréstimos.
-
-- **Cadastro de Alunos**  
-  Gestão dos alunos que utilizam os serviços da biblioteca.
 
 - **Cadastro de Autores e Editoras**  
   Organização de dados complementares para estruturação do acervo.
