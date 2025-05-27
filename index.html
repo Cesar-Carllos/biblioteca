@@ -1,1055 +1,1078 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Sistema de Biblioteca</title>
-    <link rel="stylesheet" href="style.css">
-</head>
+    <link rel="stylesheet" href="style.css" />
+  </head>
 
-<body>
+  <body>
     <div class="container">
-        <!-- Sidebar -->
-        <div class="sidebar">
-            <div class="logo-container">
-                <div class="logo">B</div>
-                <div class="user-info">
-                    <div class="user-name">César Carlos</div>
-                    <div class="user-role">admin</div>
-                </div>
-            </div>
-
-            <ul class="menu">
-                <li class="menu-item" data-view="dashboard">
-                    <i>📊</i> Dashboard
-                </li>
-                <li class="menu-item" data-view="emprestimos">
-                    <i>📊</i> Empréstimos
-                </li>
-                <li class="menu-item" data-view="estudantes">
-                    <i>👨‍🎓</i> Estudantes
-                </li>
-                <li class="menu-item" data-view="materias">
-                    <i>📚</i> Matérias
-                </li>
-                <li class="menu-item" data-view="livros">
-                    <i>📖</i> Livros
-                </li>
-                <li class="menu-item" data-view="autores">
-                    <i>✍️</i> Autores
-                </li>
-                <li class="menu-item" data-view="editoras">
-                    <i>🏢</i> Editoras
-                </li>
-                <li class="menu-item" data-view="administracao">
-                    <i>⚙️</i> Administração
-                </li>
-                <li class="menu-item" data-view="relatorios">
-                    <i>📋</i> Relatórios
-                </li>
-            </ul>
+      <!-- Sidebar -->
+      <div class="sidebar">
+        <div class="logo-container">
+          <div class="logo">B</div>
+          <div class="user-info">
+            <div class="user-name">César Carlos</div>
+            <div class="user-role">admin</div>
+          </div>
         </div>
 
-        <!-- Main Content -->
-        <div class="main-content">
-            <!-- Header -->
-            <div class="header">
-                <div class="header-actions">
-                    <button>≡</button>
-                </div>
-                <div class="header-title">Sistema de Biblioteca</div>
-            </div>
+        <ul class="menu">
+          <li class="menu-item" data-view="dashboard"><i>📊</i> Dashboard</li>
+          <li class="menu-item" data-view="emprestimos">
+            <i>📊</i> Empréstimos
+          </li>
+          <li class="menu-item" data-view="estudantes"><i>👨‍🎓</i> Estudantes</li>
+          <li class="menu-item" data-view="materias"><i>📚</i> Matérias</li>
+          <li class="menu-item" data-view="livros"><i>📖</i> Livros</li>
+          <li class="menu-item" data-view="autores"><i>✍️</i> Autores</li>
+          <li class="menu-item" data-view="editoras"><i>🏢</i> Editoras</li>
+          <li class="menu-item" data-view="administracao">
+            <i>⚙️</i> Administração
+          </li>
+          <li class="menu-item" data-view="relatorios"><i>📋</i> Relatórios</li>
+        </ul>
+      </div>
 
-            <!-- Dashboard View -->
-            <div class="view active" id="dashboard">
-                <div class="page-title">
-                    <h2><i>⚙️</i> Painel de administração</h2>
-                </div>
-
-                <div class="content-area">
-                    <!-- First Row Cards -->
-                    <div class="dashboard-cards">
-                        <div class="card card-users">
-                            <div class="card-icon">👥</div>
-                            <div class="card-info">
-                                <div class="card-title">USUÁRIOS</div>
-                                <div class="card-value">3</div>
-                            </div>
-                        </div>
-
-                        <div class="card card-books">
-                            <div class="card-icon">📚</div>
-                            <div class="card-info">
-                                <div class="card-title">LIVROS</div>
-                                <div class="card-value">5</div>
-                            </div>
-                        </div>
-
-                        <div class="card card-authors">
-                            <div class="card-icon">✍️</div>
-                            <div class="card-info">
-                                <div class="card-title">AUTORES</div>
-                                <div class="card-value">3</div>
-                            </div>
-                        </div>
-
-                        <div class="card card-publishers">
-                            <div class="card-icon">🏢</div>
-                            <div class="card-info">
-                                <div class="card-title">EDITORAS</div>
-                                <div class="card-value">4</div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Second Row Cards -->
-                    <div class="dashboard-cards">
-                        <div class="card card-students">
-                            <div class="card-icon">🎓</div>
-                            <div class="card-info">
-                                <div class="card-title">ESTUDANTES</div>
-                                <div class="card-value">5</div>
-                            </div>
-                        </div>
-
-                        <div class="card card-loans">
-                            <div class="card-icon">⏱️</div>
-                            <div class="card-info">
-                                <div class="card-title">EMPRÉSTIMOS</div>
-                                <div class="card-value">1</div>
-                            </div>
-                        </div>
-
-                        <div class="card card-subjects">
-                            <div class="card-icon">📝</div>
-                            <div class="card-info">
-                                <div class="card-title">MATÉRIAS</div>
-                                <div class="card-value">4</div>
-                            </div>
-                        </div>
-
-                        <div class="card card-settings">
-                            <div class="card-icon">⚙️</div>
-                            <div class="card-info">
-                                <div class="card-title">Configurações</div>
-                                <div class="card-value"></div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Chart Section -->
-                    <div class="chart-section">
-                        <h3>Livros disponíveis</h3>
-                        <div class="chart-container">
-                            <div class="chart-grid">
-                                <div class="chart-grid-line">
-                                    <span class="chart-grid-value">70</span>
-                                </div>
-                                <div class="chart-grid-line">
-                                    <span class="chart-grid-value">60</span>
-                                </div>
-                                <div class="chart-grid-line">
-                                    <span class="chart-grid-value">50</span>
-                                </div>
-                            </div>
-                            <div class="chart-bar" style="height: 65%; left: 50px;"></div>
-                            <div class="chart-labels">
-                                <span>Jan</span>
-                                <span>Fev</span>
-                                <span>Mar</span>
-                                <span>Abr</span>
-                                <span>Mai</span>
-                            </div>
-                        </div>
-                        <div class="chart-legend">
-                            <div class="legend-item">
-                                <div class="legend-color red"></div>
-                                <span>Livros</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Autores View -->
-            <div class="view" id="autores">
-                <div class="page-title">
-                    <h2><i>✍️</i> Autores</h2>
-                </div>
-
-                <div class="content-area">
-                    <div class="table-container">
-                        <div class="table-header">
-                            <div class="table-actions">
-                                <button id="addAutorBtn" class="add-button">+</button>
-                                <label>Mostrar</label>
-                                <select>
-                                    <option>10</option>
-                                    <option>25</option>
-                                    <option>50</option>
-                                    <option>100</option>
-                                </select>
-                                <span>Registros</span>
-                            </div>
-
-                            <div class="export-buttons">
-                                <button class="export-button excel">📊</button>
-                                <button class="export-button pdf">📄</button>
-                                <button class="export-button print">🖨️</button>
-                            </div>
-
-                            <div class="search-box">
-                                <label>Pesquisar:</label>
-                                <input type="text" placeholder="">
-                            </div>
-                        </div>
-
-                        <table>
-                            <thead>
-                                <tr>
-                                    <th>Id</th>
-                                    <th>Foto</th>
-                                    <th>Nome</th>
-                                    <th>Situação</th>
-                                    <th>Ações</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td>4</td>
-                                    <td>
-                                        <div class="thumbnail">V</div>
-                                    </td>
-                                    <td>Rogério</td>
-                                    <td><span class="status-badge">Ativo</span></td>
-                                    <td class="actions">
-                                        <button class="action-button edit-button">✏️</button>
-                                        <button class="action-button delete-button">🗑️</button>
-                                    </td>
-                                </tr>
-                            </tbody>
-                        </table>
-
-                        <div class="pagination">
-                            <div class="pagination-info">
-                                Mostrando 1 a 1 de 1 Registros
-                            </div>
-                            <div class="pagination-buttons">
-                                <button class="pagination-button">◀</button>
-                                <button class="pagination-button active">1</button>
-                                <button class="pagination-button">▶</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Editoras View -->
-            <div class="view" id="editoras">
-                <div class="page-title">
-                    <h2><i>🏢</i> Editoras</h2>
-                </div>
-
-                <div class="content-area">
-                    <div class="table-container">
-                        <div class="table-header">
-                            <div class="table-actions">
-                                <button id="addEditoraBtn" class="add-button">+</button>
-                                <label>Mostrar</label>
-                                <select>
-                                    <option>10</option>
-                                    <option>25</option>
-                                    <option>50</option>
-                                    <option>100</option>
-                                </select>
-                                <span>Registros</span>
-                            </div>
-
-
-                            <div class="export-buttons">
-                                <button class="export-button excel">📊</button>
-                                <button class="export-button pdf">📄</button>
-                                <button class="export-button print">🖨️</button>
-                            </div>
-
-                            <div class="search-box">
-                                <label>Pesquisar:</label>
-                                <input type="text" placeholder="">
-                            </div>
-                        </div>
-
-                        <table>
-                            <thead>
-                                <tr>
-                                    <th>Id</th>
-                                    <th>Nome</th>
-                                    <th>Situação</th>
-                                    <th>Ações</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td>2</td>
-                                    <td>Torino Amyelin</td>
-                                    <td><span class="status-badge">Ativo</span></td>
-                                    <td class="actions">
-                                        <button class="action-button edit-button">✏️</button>
-                                        <button class="action-button delete-button">🗑️</button>
-                                    </td>
-                                </tr>
-                            </tbody>
-                        </table>
-
-                        <div class="pagination">
-                            <div class="pagination-info">
-                                Mostrando 1 a 1 de 1 Registros
-                            </div>
-                            <div class="pagination-buttons">
-                                <button class="pagination-button">◀</button>
-                                <button class="pagination-button active">1</button>
-                                <button class="pagination-button">▶</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Livros View -->
-            <div class="view" id="livros">
-                <div class="page-title">
-                    <h2><i>📚</i> Livros</h2>
-                </div>
-
-                <div class="content-area">
-                    <div class="table-container">
-                        <div class="table-header">
-                            <div class="table-actions">
-                                <button id="addLivroBtn" class="add-button">+</button>
-                                <label>Mostrar</label>
-                                <select>
-                                    <option>10</option>
-                                    <option>25</option>
-                                    <option>50</option>
-                                    <option>100</option>
-                                </select>
-                                <span>Registros</span>
-                            </div>
-
-                            <div class="export-buttons">
-                                <button class="export-button excel">📊</button>
-                                <button class="export-button pdf">📄</button>
-                                <button class="export-button print">🖨️</button>
-                            </div>
-
-                            <div class="search-box">
-                                <label>Pesquisar:</label>
-                                <input type="text" placeholder="">
-                            </div>
-                        </div>
-
-                        <table>
-                            <thead>
-                                <tr>
-                                    <th>Id</th>
-                                    <th>Título</th>
-                                    <th>Autor</th>
-                                    <th>Editora</th>
-                                    <th>Matéria</th>
-                                    <th>Capa</th>
-                                    <th>Situação</th>
-                                    <th>Ações</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td>3</td>
-                                    <td>A conquista da matemática</td>
-                                    <td>popopipipi</td>
-                                    <td>Moderna</td>
-                                    <td>Matemática</td>
-                                    <td>
-                                        <div class="thumbnail">📚</div>
-                                    </td>
-                                    <td><span class="status-badge">Ativo</span></td>
-                                    <td class="actions">
-                                        <button class="action-button edit-button">✏️</button>
-                                        <button class="action-button delete-button">🗑️</button>
-                                    </td>
-                                </tr>
-                            </tbody>
-                        </table>
-
-                        <div class="pagination">
-                            <div class="pagination-info">
-                                Mostrando 1 a 1 de 1 Registros
-                            </div>
-                            <div class="pagination-buttons">
-                                <button class="pagination-button">◀</button>
-                                <button class="pagination-button active">1</button>
-                                <button class="pagination-button">▶</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Empréstimos View -->
-            <div class="view" id="emprestimos">
-                <div class="page-title">
-                    <h2><i>📊</i> Empréstimos</h2>
-                </div>
-
-                <div class="content-area">
-                    <div class="table-container">
-                        <div class="table-header">
-                            <div class="table-actions">
-                                <button id="addEmprestimoBtn" class="add-button">+</button>
-                                <label>Mostrar</label>
-                                <select>
-                                    <option>10</option>
-                                    <option>25</option>
-                                    <option>50</option>
-                                    <option>100</option>
-                                </select>
-                                <span>Registros</span>
-                            </div>
-
-                            <div class="export-buttons">
-                                <button class="export-button excel">📊</button>
-                                <button class="export-button pdf">📄</button>
-                                <button class="export-button print">🖨️</button>
-                            </div>
-
-                            <div class="search-box">
-                                <label>Pesquisar:</label>
-                                <input type="text" placeholder="">
-                            </div>
-                        </div>
-
-                        <table>
-                            <thead>
-                                <tr>
-                                    <th>Id</th>
-                                    <th>Livro</th>
-                                    <th>Estudante</th>
-                                    <th>Data empréstimo</th>
-                                    <th>Data devolução</th>
-                                    <th>Quant.</th>
-                                    <th>Observação</th>
-                                    <th>Situação</th>
-                                    <th>Ações</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                               <tr>
-                                    <td>3</td>
-                                    <td>A conquista da matemática</td>
-                                    <td>Lucas</td>
-                                    <td>18/09/2023</td>
-                                    <td>25/09/2023</td>
-                                    <td>1</td>
-                                    <td>Empréstimo de urgência</td>
-                                    <td><span class="status-badge">Emprestado</span></td>
-                                    <td class="actions">
-                                        <button class="action-button edit-button">✏️</button>
-                                        <button class="action-button delete-button">🗑️</button>
-                                    </td>
-                                </tr>
-                            </tbody>
-                        </table>
-
-                        <div class="pagination">
-                            <div class="pagination-info">
-                                Mostrando 1 a 1 de 1 Registros
-                            </div>
-                            <div class="pagination-buttons">
-                                <button class="pagination-button">◀</button>
-                                <button class="pagination-button active">1</button>
-                                <button class="pagination-button">▶</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Estudantes View -->
-            <div class="view" id="estudantes">
-                <div class="page-title">
-                    <h2><i>👨‍🎓</i> Estudantes</h2>
-                </div>
-
-                <div class="content-area">
-                    <div class="table-container">
-                        <div class="table-header">
-                            <div class="table-actions">
-                                <button id="addEstudanteBtn" class="add-button">+</button>
-                                <label>Mostrar</label>
-                                <select>
-                                    <option>10</option>
-                                    <option>25</option>
-                                    <option>50</option>
-                                    <option>100</option>
-                                </select>
-                                <span>Registros</span>
-                            </div>
-
-                            <div class="export-buttons">
-                                <button class="export-button excel">📊</button>
-                                <button class="export-button pdf">📄</button>
-                                <button class="export-button print">🖨️</button>
-                            </div>
-
-                            <div class="search-box">
-                                <label>Pesquisar:</label>
-                                <input type="text" placeholder="">
-                            </div>
-                        </div>
-
-                        <table>
-                            <thead>
-                                <tr>
-                                    <th>Id</th>
-                                    <th>Foto</th>
-                                    <th>Nome</th>
-                                    <th>Matrícula</th>
-                                    <th>Email</th>
-                                    <th>Telefone</th>
-                                    <th>Situação</th>
-                                    <th>Ações</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td>1</td>
-                                    <td>
-                                        <div class="thumbnail">👤</div>
-                                    </td>
-                                    <td>Lucas Silva</td>
-                                    <td>202301</td>
-                                    <td>lucas@email.com</td>
-                                    <td>(11) 98765-4321</td>
-                                    <td><span class="status-badge">Ativo</span></td>
-                                    <td class="actions">
-                                        <button class="action-button edit-button">✏️</button>
-                                        <button class="action-button delete-button">🗑️</button>
-                                    </td>
-                                </tr>
-                            </tbody>
-                        </table>
-
-                        <div class="pagination">
-                            <div class="pagination-info">
-                                Mostrando 1 a 1 de 1 Registros
-                            </div>
-                            <div class="pagination-buttons">
-                                <button class="pagination-button">◀</button>
-                                <button class="pagination-button active">1</button>
-                                <button class="pagination-button">▶</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Matérias View -->
-            <div class="view" id="materias">
-                <div class="page-title">
-                    <h2><i>📚</i> Matérias</h2>
-                </div>
-
-                <div class="content-area">
-                    <div class="table-container">
-                        <div class="table-header">
-                            <div class="table-actions">
-                                <button id="addMateriaBtn" class="add-button">+</button>
-                                <label>Mostrar</label>
-                                <select>
-                                    <option>10</option>
-                                    <option>25</option>
-                                    <option>50</option>
-                                    <option>100</option>
-                                </select>
-                                <span>Registros</span>
-                            </div>
-
-                            <div class="export-buttons">
-                                <button class="export-button excel">📊</button>
-                                <button class="export-button pdf">📄</button>
-                                <button class="export-button print">🖨️</button>
-                            </div>
-
-                            <div class="search-box">
-                                <label>Pesquisar:</label>
-                                <input type="text" placeholder="">
-                            </div>
-                        </div>
-
-                        <table>
-                            <thead>
-                                <tr>
-                                    <th>Id</th>
-                                    <th>Nome</th>
-                                    <th>Situação</th>
-                                    <th>Ações</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td>1</td>
-                                    <td>Programação</td>
-                                    <td><span class="status-badge">Ativo</span></td>
-                                    <td class="actions">
-                                        <button class="action-button edit-button">✏️</button>
-                                        <button class="action-button delete-button">🗑️</button>
-                                    </td>
-                                </tr>
-                            </tbody>
-                        </table>
-
-                        <div class="pagination">
-                            <div class="pagination-info">
-                                Mostrando 1 a 1 de 1 Registros
-                            </div>
-                            <div class="pagination-buttons">
-                                <button class="pagination-button">◀</button>
-                                <button class="pagination-button active">1</button>
-                                <button class="pagination-button">▶</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Administração View -->
-            <div class="view" id="administracao">
-                <div class="page-title">
-                    <h2><i>⚙️</i> Administração</h2>
-                </div>
-
-                <div class="content-area">
-                    <div class="table-container">
-                        <div class="table-header">
-                            <div class="table-actions">
-                                <button id="addAdminBtn" class="add-button">+</button>
-                                <label>Mostrar</label>
-                                <select>
-                                    <option>10</option>
-                                    <option>25</option>
-                                    <option>50</option>
-                                    <option>100</option>
-                                </select>
-                                <span>Registros</span>
-                            </div>
-
-                            <div class="export-buttons">
-                                <button class="export-button excel">📊</button>
-                                <button class="export-button pdf">📄</button>
-                                <button class="export-button print">🖨️</button>
-                            </div>
-
-                            <div class="search-box">
-                                <label>Pesquisar:</label>
-                                <input type="text" placeholder="">
-                            </div>
-                        </div>
-
-                        <table>
-                            <thead>
-                                <tr>
-                                    <th>Id</th>
-                                    <th>Foto</th>
-                                    <th>Nome</th>
-                                    <th>Email</th>
-                                    <th>Perfil</th>
-                                    <th>Situação</th>
-                                    <th>Ações</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td>1</td>
-                                    <td>
-                                        <div class="thumbnail">👤</div>
-                                    </td>
-                                    <td>Rogério Rocha</td>
-                                    <td>rogerio@email.com</td>
-                                    <td>Administrador</td>
-                                    <td><span class="status-badge">Ativo</span></td>
-                                    <td class="actions">
-                                        <button class="action-button edit-button">✏️</button>
-                                        <button class="action-button delete-button">🗑️</button>
-                                    </td>
-                                </tr>
-                            </tbody>
-                        </table>
-
-                        <div class="pagination">
-                            <div class="pagination-info">
-                                Mostrando 1 a 1 de 1 Registros
-                            </div>
-                            <div class="pagination-buttons">
-                                <button class="pagination-button">◀</button>
-                                <button class="pagination-button active">1</button>
-                                <button class="pagination-button">▶</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Relatórios View -->
-            <div class="view" id="relatorios">
-                <div class="page-title">
-                    <h2><i>📋</i> Relatórios</h2>
-                </div>
-
-                <div class="content-area">
-                    <div class="dashboard-cards">
-                        <div class="card">
-                            <div class="card-icon" style="background-color: #00bfa5;">📊</div>
-                            <div class="card-info">
-                                <div class="card-title">EMPRÉSTIMOS MENSAIS</div>
-                                <div class="card-value">Relatório</div>
-                            </div>
-                        </div>
-
-                        <div class="card">
-                            <div class="card-icon" style="background-color: #009688;">📈</div>
-                            <div class="card-info">
-                                <div class="card-title">LIVROS POPULARES</div>
-                                <div class="card-value">Relatório</div>
-                            </div>
-                        </div>
-
-                        <div class="card">
-                            <div class="card-icon" style="background-color: #ffc107;">📉</div>
-                            <div class="card-info">
-                                <div class="card-title">ATRASOS</div>
-                                <div class="card-value">Relatório</div>
-                            </div>
-                        </div>
-
-                        <div class="card">
-                            <div class="card-icon" style="background-color: #d32f2f;">📃</div>
-                            <div class="card-info">
-                                <div class="card-title">INVENTÁRIO</div>
-                                <div class="card-value">Relatório</div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+      <!-- Main Content -->
+      <div class="main-content">
+        <!-- Header -->
+        <div class="header">
+          <div class="header-actions">
+            <button>≡</button>
+          </div>
+          <div class="header-title">Sistema de Biblioteca</div>
         </div>
+
+        <!-- Dashboard View -->
+        <div class="view active" id="dashboard">
+          <div class="page-title">
+            <h2><i>⚙️</i> Painel de administração</h2>
+          </div>
+
+          <div class="content-area">
+            <!-- First Row Cards -->
+            <div class="dashboard-cards">
+              <div class="card card-users">
+                <div class="card-icon">👥</div>
+                <div class="card-info">
+                  <div class="card-title">USUÁRIOS</div>
+                  <div class="card-value">3</div>
+                </div>
+              </div>
+
+              <div class="card card-books">
+                <div class="card-icon">📚</div>
+                <div class="card-info">
+                  <div class="card-title">LIVROS</div>
+                  <div class="card-value">5</div>
+                </div>
+              </div>
+
+              <div class="card card-authors">
+                <div class="card-icon">✍️</div>
+                <div class="card-info">
+                  <div class="card-title">AUTORES</div>
+                  <div class="card-value">3</div>
+                </div>
+              </div>
+
+              <div class="card card-publishers">
+                <div class="card-icon">🏢</div>
+                <div class="card-info">
+                  <div class="card-title">EDITORAS</div>
+                  <div class="card-value">4</div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Second Row Cards -->
+            <div class="dashboard-cards">
+              <div class="card card-students">
+                <div class="card-icon">🎓</div>
+                <div class="card-info">
+                  <div class="card-title">ESTUDANTES</div>
+                  <div class="card-value">5</div>
+                </div>
+              </div>
+
+              <div class="card card-loans">
+                <div class="card-icon">⏱️</div>
+                <div class="card-info">
+                  <div class="card-title">EMPRÉSTIMOS</div>
+                  <div class="card-value">1</div>
+                </div>
+              </div>
+
+              <div class="card card-subjects">
+                <div class="card-icon">📝</div>
+                <div class="card-info">
+                  <div class="card-title">MATÉRIAS</div>
+                  <div class="card-value">4</div>
+                </div>
+              </div>
+
+              <div class="card card-settings">
+                <div class="card-icon">⚙️</div>
+                <div class="card-info">
+                  <div class="card-title">Configurações</div>
+                  <div class="card-value"></div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Chart Section -->
+            <div class="chart-section">
+              <h3>Livros disponíveis</h3>
+              <div class="chart-container">
+                <div class="chart-grid">
+                  <div class="chart-grid-line">
+                    <span class="chart-grid-value">70</span>
+                  </div>
+                  <div class="chart-grid-line">
+                    <span class="chart-grid-value">60</span>
+                  </div>
+                  <div class="chart-grid-line">
+                    <span class="chart-grid-value">50</span>
+                  </div>
+                </div>
+                <div class="chart-bar" style="height: 65%; left: 50px"></div>
+                <div class="chart-labels">
+                  <span>Jan</span>
+                  <span>Fev</span>
+                  <span>Mar</span>
+                  <span>Abr</span>
+                  <span>Mai</span>
+                </div>
+              </div>
+              <div class="chart-legend">
+                <div class="legend-item">
+                  <div class="legend-color red"></div>
+                  <span>Livros</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Autores View -->
+        <div class="view" id="autores">
+          <div class="page-title">
+            <h2><i>✍️</i> Autores</h2>
+          </div>
+
+          <div class="content-area">
+            <div class="table-container">
+              <div class="table-header">
+                <div class="table-actions">
+                  <button id="addAutorBtn" class="add-button">+</button>
+                  <label>Mostrar</label>
+                  <select>
+                    <option>10</option>
+                    <option>25</option>
+                    <option>50</option>
+                    <option>100</option>
+                  </select>
+                  <span>Registros</span>
+                </div>
+
+                <div class="export-buttons">
+                  <button class="export-button excel">📊</button>
+                  <button class="export-button pdf">📄</button>
+                  <button class="export-button print">🖨️</button>
+                </div>
+
+                <div class="search-box">
+                  <label>Pesquisar:</label>
+                  <input type="text" placeholder="" />
+                </div>
+              </div>
+
+              <table>
+                <thead>
+                  <tr>
+                    <th>Id</th>
+                    <th>Foto</th>
+                    <th>Nome</th>
+                    <th>Situação</th>
+                    <th>Ações</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>4</td>
+                    <td>
+                      <div class="thumbnail">V</div>
+                    </td>
+                    <td>Rogério</td>
+                    <td><span class="status-badge">Ativo</span></td>
+                    <td class="actions">
+                      <button class="action-button edit-button">✏️</button>
+                      <button class="action-button delete-button">🗑️</button>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+
+              <div class="pagination">
+                <div class="pagination-info">
+                  Mostrando 1 a 1 de 1 Registros
+                </div>
+                <div class="pagination-buttons">
+                  <button class="pagination-button">◀</button>
+                  <button class="pagination-button active">1</button>
+                  <button class="pagination-button">▶</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Editoras View -->
+        <div class="view" id="editoras">
+          <div class="page-title">
+            <h2><i>🏢</i> Editoras</h2>
+          </div>
+
+          <div class="content-area">
+            <div class="table-container">
+              <div class="table-header">
+                <div class="table-actions">
+                  <button id="addEditoraBtn" class="add-button">+</button>
+                  <label>Mostrar</label>
+                  <select>
+                    <option>10</option>
+                    <option>25</option>
+                    <option>50</option>
+                    <option>100</option>
+                  </select>
+                  <span>Registros</span>
+                </div>
+
+                <div class="export-buttons">
+                  <button class="export-button excel">📊</button>
+                  <button class="export-button pdf">📄</button>
+                  <button class="export-button print">🖨️</button>
+                </div>
+
+                <div class="search-box">
+                  <label>Pesquisar:</label>
+                  <input type="text" placeholder="" />
+                </div>
+              </div>
+
+              <table>
+                <thead>
+                  <tr>
+                    <th>Id</th>
+                    <th>Nome</th>
+                    <th>Situação</th>
+                    <th>Ações</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>2</td>
+                    <td>Torino Amyelin</td>
+                    <td><span class="status-badge">Ativo</span></td>
+                    <td class="actions">
+                      <button class="action-button edit-button">✏️</button>
+                      <button class="action-button delete-button">🗑️</button>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+
+              <div class="pagination">
+                <div class="pagination-info">
+                  Mostrando 1 a 1 de 1 Registros
+                </div>
+                <div class="pagination-buttons">
+                  <button class="pagination-button">◀</button>
+                  <button class="pagination-button active">1</button>
+                  <button class="pagination-button">▶</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Livros View -->
+        <div class="view" id="livros">
+          <div class="page-title">
+            <h2><i>📚</i> Livros</h2>
+          </div>
+
+          <div class="content-area">
+            <div class="table-container">
+              <div class="table-header">
+                <div class="table-actions">
+                  <button id="addLivroBtn" class="add-button">+</button>
+                  <label>Mostrar</label>
+                  <select>
+                    <option>10</option>
+                    <option>25</option>
+                    <option>50</option>
+                    <option>100</option>
+                  </select>
+                  <span>Registros</span>
+                </div>
+
+                <div class="export-buttons">
+                  <button class="export-button excel">📊</button>
+                  <button class="export-button pdf">📄</button>
+                  <button class="export-button print">🖨️</button>
+                </div>
+
+                <div class="search-box">
+                  <label>Pesquisar:</label>
+                  <input type="text" placeholder="" />
+                </div>
+              </div>
+
+              <table>
+                <thead>
+                  <tr>
+                    <th>Id</th>
+                    <th>Título</th>
+                    <th>Autor</th>
+                    <th>Editora</th>
+                    <th>Matéria</th>
+                    <th>Capa</th>
+                    <th>Situação</th>
+                    <th>Ações</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>3</td>
+                    <td>A conquista da matemática</td>
+                    <td>popopipipi</td>
+                    <td>Moderna</td>
+                    <td>Matemática</td>
+                    <td>
+                      <div class="thumbnail">📚</div>
+                    </td>
+                    <td><span class="status-badge">Ativo</span></td>
+                    <td class="actions">
+                      <button class="action-button edit-button">✏️</button>
+                      <button class="action-button delete-button">🗑️</button>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+
+              <div class="pagination">
+                <div class="pagination-info">
+                  Mostrando 1 a 1 de 1 Registros
+                </div>
+                <div class="pagination-buttons">
+                  <button class="pagination-button">◀</button>
+                  <button class="pagination-button active">1</button>
+                  <button class="pagination-button">▶</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Empréstimos View -->
+        <div class="view" id="emprestimos">
+          <div class="page-title">
+            <h2><i>📊</i> Empréstimos</h2>
+          </div>
+
+          <div class="content-area">
+            <div class="table-container">
+              <div class="table-header">
+                <div class="table-actions">
+                  <button id="addEmprestimoBtn" class="add-button">+</button>
+                  <label>Mostrar</label>
+                  <select>
+                    <option>10</option>
+                    <option>25</option>
+                    <option>50</option>
+                    <option>100</option>
+                  </select>
+                  <span>Registros</span>
+                </div>
+
+                <div class="export-buttons">
+                  <button class="export-button excel">📊</button>
+                  <button class="export-button pdf">📄</button>
+                  <button class="export-button print">🖨️</button>
+                </div>
+
+                <div class="search-box">
+                  <label>Pesquisar:</label>
+                  <input type="text" placeholder="" />
+                </div>
+              </div>
+
+              <table>
+                <thead>
+                  <tr>
+                    <th>Id</th>
+                    <th>Livro</th>
+                    <th>Estudante</th>
+                    <th>Data empréstimo</th>
+                    <th>Data devolução</th>
+                    <th>Quant.</th>
+                    <th>Observação</th>
+                    <th>Situação</th>
+                    <th>Ações</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>3</td>
+                    <td>A conquista da matemática</td>
+                    <td>Lucas</td>
+                    <td>18/09/2023</td>
+                    <td>25/09/2023</td>
+                    <td>1</td>
+                    <td>Empréstimo de urgência</td>
+                    <td><span class="status-badge">Emprestado</span></td>
+                    <td class="actions">
+                      <button class="action-button edit-button">✏️</button>
+                      <button class="action-button delete-button">🗑️</button>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+
+              <div class="pagination">
+                <div class="pagination-info">
+                  Mostrando 1 a 1 de 1 Registros
+                </div>
+                <div class="pagination-buttons">
+                  <button class="pagination-button">◀</button>
+                  <button class="pagination-button active">1</button>
+                  <button class="pagination-button">▶</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Estudantes View -->
+        <div class="view" id="estudantes">
+          <div class="page-title">
+            <h2><i>👨‍🎓</i> Estudantes</h2>
+          </div>
+
+          <div class="content-area">
+            <div class="table-container">
+              <div class="table-header">
+                <div class="table-actions">
+                  <button id="addEstudanteBtn" class="add-button">+</button>
+                  <label>Mostrar</label>
+                  <select>
+                    <option>10</option>
+                    <option>25</option>
+                    <option>50</option>
+                    <option>100</option>
+                  </select>
+                  <span>Registros</span>
+                </div>
+
+                <div class="export-buttons">
+                  <button class="export-button excel">📊</button>
+                  <button class="export-button pdf">📄</button>
+                  <button class="export-button print">🖨️</button>
+                </div>
+
+                <div class="search-box">
+                  <label>Pesquisar:</label>
+                  <input type="text" placeholder="" />
+                </div>
+              </div>
+
+              <table>
+                <thead>
+                  <tr>
+                    <th>Id</th>
+                    <th>Foto</th>
+                    <th>Nome</th>
+                    <th>Matrícula</th>
+                    <th>Email</th>
+                    <th>Telefone</th>
+                    <th>Situação</th>
+                    <th>Ações</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>1</td>
+                    <td>
+                      <div class="thumbnail">👤</div>
+                    </td>
+                    <td>Lucas Silva</td>
+                    <td>202301</td>
+                    <td>lucas@email.com</td>
+                    <td>(11) 98765-4321</td>
+                    <td><span class="status-badge">Ativo</span></td>
+                    <td class="actions">
+                      <button class="action-button edit-button">✏️</button>
+                      <button class="action-button delete-button">🗑️</button>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+
+              <div class="pagination">
+                <div class="pagination-info">
+                  Mostrando 1 a 1 de 1 Registros
+                </div>
+                <div class="pagination-buttons">
+                  <button class="pagination-button">◀</button>
+                  <button class="pagination-button active">1</button>
+                  <button class="pagination-button">▶</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Matérias View -->
+        <div class="view" id="materias">
+          <div class="page-title">
+            <h2><i>📚</i> Matérias</h2>
+          </div>
+
+          <div class="content-area">
+            <div class="table-container">
+              <div class="table-header">
+                <div class="table-actions">
+                  <button id="addMateriaBtn" class="add-button">+</button>
+                  <label>Mostrar</label>
+                  <select>
+                    <option>10</option>
+                    <option>25</option>
+                    <option>50</option>
+                    <option>100</option>
+                  </select>
+                  <span>Registros</span>
+                </div>
+
+                <div class="export-buttons">
+                  <button class="export-button excel">📊</button>
+                  <button class="export-button pdf">📄</button>
+                  <button class="export-button print">🖨️</button>
+                </div>
+
+                <div class="search-box">
+                  <label>Pesquisar:</label>
+                  <input type="text" placeholder="" />
+                </div>
+              </div>
+
+              <table>
+                <thead>
+                  <tr>
+                    <th>Id</th>
+                    <th>Nome</th>
+                    <th>Situação</th>
+                    <th>Ações</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>1</td>
+                    <td>Programação</td>
+                    <td><span class="status-badge">Ativo</span></td>
+                    <td class="actions">
+                      <button class="action-button edit-button">✏️</button>
+                      <button class="action-button delete-button">🗑️</button>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+
+              <div class="pagination">
+                <div class="pagination-info">
+                  Mostrando 1 a 1 de 1 Registros
+                </div>
+                <div class="pagination-buttons">
+                  <button class="pagination-button">◀</button>
+                  <button class="pagination-button active">1</button>
+                  <button class="pagination-button">▶</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Administração View -->
+        <div class="view" id="administracao">
+          <div class="page-title">
+            <h2><i>⚙️</i> Administração</h2>
+          </div>
+
+          <div class="content-area">
+            <div class="table-container">
+              <div class="table-header">
+                <div class="table-actions">
+                  <button id="addAdminBtn" class="add-button">+</button>
+                  <label>Mostrar</label>
+                  <select>
+                    <option>10</option>
+                    <option>25</option>
+                    <option>50</option>
+                    <option>100</option>
+                  </select>
+                  <span>Registros</span>
+                </div>
+
+                <div class="export-buttons">
+                  <button class="export-button excel">📊</button>
+                  <button class="export-button pdf">📄</button>
+                  <button class="export-button print">🖨️</button>
+                </div>
+
+                <div class="search-box">
+                  <label>Pesquisar:</label>
+                  <input type="text" placeholder="" />
+                </div>
+              </div>
+
+              <table>
+                <thead>
+                  <tr>
+                    <th>Id</th>
+                    <th>Foto</th>
+                    <th>Nome</th>
+                    <th>Email</th>
+                    <th>Perfil</th>
+                    <th>Situação</th>
+                    <th>Ações</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>1</td>
+                    <td>
+                      <div class="thumbnail">👤</div>
+                    </td>
+                    <td>Rogério Rocha</td>
+                    <td>rogerio@email.com</td>
+                    <td>Administrador</td>
+                    <td><span class="status-badge">Ativo</span></td>
+                    <td class="actions">
+                      <button class="action-button edit-button">✏️</button>
+                      <button class="action-button delete-button">🗑️</button>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+
+              <div class="pagination">
+                <div class="pagination-info">
+                  Mostrando 1 a 1 de 1 Registros
+                </div>
+                <div class="pagination-buttons">
+                  <button class="pagination-button">◀</button>
+                  <button class="pagination-button active">1</button>
+                  <button class="pagination-button">▶</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Relatórios View -->
+        <div class="view" id="relatorios">
+          <div class="page-title">
+            <h2><i>📋</i> Relatórios</h2>
+          </div>
+
+          <div class="content-area">
+            <div class="dashboard-cards">
+              <div class="card">
+                <div class="card-icon" style="background-color: #00bfa5">
+                  📊
+                </div>
+                <div class="card-info">
+                  <div class="card-title">EMPRÉSTIMOS MENSAIS</div>
+                  <div class="card-value">Relatório</div>
+                </div>
+              </div>
+
+              <div class="card">
+                <div class="card-icon" style="background-color: #009688">
+                  📈
+                </div>
+                <div class="card-info">
+                  <div class="card-title">LIVROS POPULARES</div>
+                  <div class="card-value">Relatório</div>
+                </div>
+              </div>
+
+              <div class="card">
+                <div class="card-icon" style="background-color: #ffc107">
+                  📉
+                </div>
+                <div class="card-info">
+                  <div class="card-title">ATRASOS</div>
+                  <div class="card-value">Relatório</div>
+                </div>
+              </div>
+
+              <div class="card">
+                <div class="card-icon" style="background-color: #d32f2f">
+                  📃
+                </div>
+                <div class="card-info">
+                  <div class="card-title">INVENTÁRIO</div>
+                  <div class="card-value">Relatório</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
 
     <!-- Modal Autor -->
     <div class="modal-backdrop" id="autorModal">
-        <div class="modal">
-            <div class="modal-header">
-                <h3 class="modal-title">Novo autor</h3>
-                <button class="modal-close">&times;</button>
-            </div>
-            <div class="modal-body">
-                <div class="form-group">
-                    <label for="autorNome">Nome</label>
-                    <input type="text" id="autorNome" class="form-control">
-                </div>
-                <div class="form-group">
-                    <label for="autorFoto">Logo</label>
-                    <div class="upload-box">
-                        <span class="upload-icon">📷</span>
-                        <p>Clique ou arraste uma imagem</p>
-                    </div>
-                    <div class="image-preview">
-                        <div class="image-preview-placeholder">Sem imagem</div>
-                    </div>
-                </div>
-            </div>
-            <div class="modal-footer">
-                <button class="btn btn-primary">Cadastrar</button>
-                <button class="btn btn-secondary">Voltar</button>
-            </div>
+      <div class="modal">
+        <div class="modal-header">
+          <h3 class="modal-title">Novo autor</h3>
+          <button class="modal-close">&times;</button>
         </div>
+        <div class="modal-body">
+          <div class="form-group">
+            <label for="autorNome">Nome</label>
+            <input type="text" id="autorNome" class="form-control" />
+          </div>
+          <div class="form-group">
+            <label for="autorFoto">Logo</label>
+            <div class="upload-box">
+              <span class="upload-icon">📷</span>
+              <p>Clique ou arraste uma imagem</p>
+            </div>
+            <div class="image-preview">
+              <div class="image-preview-placeholder">Sem imagem</div>
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button class="btn btn-primary">Cadastrar</button>
+          <button class="btn btn-secondary">Voltar</button>
+        </div>
+      </div>
     </div>
 
     <!-- Modal Editora -->
     <div class="modal-backdrop" id="editoraModal">
-        <div class="modal">
-            <div class="modal-header">
-                <h3 class="modal-title">Nova editora</h3>
+      <div class="modal">
+        <div class="modal-header">
+          <h3 class="modal-title">Nova editora</h3>
 
-                <!-- Continuação do Modal Editora -->
-                <button class="modal-close">&times;</button>
-            </div>
-            <div class="modal-body">
-                <div class="form-group">
-                    <label for="editoraNome">Nome</label>
-                    <input type="text" id="editoraNome" class="form-control">
-                </div>
-            </div>
-            <div class="modal-footer">
-                <button class="btn btn-primary">Cadastrar</button>
-                <button class="btn btn-secondary">Voltar</button>
-            </div>
+          <!-- Continuação do Modal Editora -->
+          <button class="modal-close">&times;</button>
         </div>
+        <div class="modal-body">
+          <div class="form-group">
+            <label for="editoraNome">Nome</label>
+            <input type="text" id="editoraNome" class="form-control" />
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button class="btn btn-primary">Cadastrar</button>
+          <button class="btn btn-secondary">Voltar</button>
+        </div>
+      </div>
     </div>
 
     <!-- Modal Livro -->
     <div class="modal-backdrop" id="livroModal">
-        <div class="modal">
-            <div class="modal-header">
-                <h3 class="modal-title">Novo livro</h3>
-                <button class="modal-close">&times;</button>
-            </div>
-            <div class="modal-body">
-                <div class="form-row">
-                    <div class="form-group col-md-8">
-                        <label for="livroTitulo">Título</label>
-                        <input type="text" id="livroTitulo" class="form-control">
-                    </div>
-                    <div class="form-group col-md-4">
-                        <label for="livroAutor">Autor</label>
-                        <select id="livroAutor" class="form-control">
-                            <option value="">Procurar Autor</option>
-                            <option value="1">ultima prueba</option>
-                            <option value="2">cambiar el nombre !!!</option>
-                            <option value="3">popopipipi</option>
-                            <option value="4">Rogério</option>
-                        </select>
-                    </div>
-                </div>
-                <div class="form-row">
-                    <div class="form-group col-md-4">
-                        <label for="livroEditora">Editora</label>
-                        <select id="livroEditora" class="form-control">
-                            <option value="">Procurar Editora</option>
-                            <option value="1">Nenhuma</option>
-                            <option value="2">Torino Amyelin</option>
-                            <option value="3">FTD</option>
-                            <option value="4">Moderna</option>
-                        </select>
-                    </div>
-                    <div class="form-group col-md-4">
-                        <label for="livroMateria">Matéria</label>
-                        <select id="livroMateria" class="form-control">
-                            <option value="">Procurar Matéria</option>
-                            <option value="1">Programação</option>
-                            <option value="2">Web</option>
-                            <option value="3">Matemática</option>
-                            <option value="4">Literatura</option>
-                        </select>
-                    </div>
-                    <div class="form-group col-md-4">
-                        <label for="livroQuantidade">Quantidade</label>
-                        <input type="number" id="livroQuantidade" class="form-control" min="1">
-                    </div>
-                </div>
-                <div class="form-row">
-                    <div class="form-group col-md-6">
-                        <label for="livroPaginas">Quantidade de páginas</label>
-                        <input type="number" id="livroPaginas" class="form-control" min="1">
-                    </div>
-                    <div class="form-group col-md-6">
-                        <label for="livroAno">Ano de edição</label>
-                        <input type="date" id="livroAno" class="form-control">
-                    </div>
-                </div>
-                <div class="form-group">
-                    <label for="livroDescricao">Descrição</label>
-                    <textarea id="livroDescricao" class="form-control" rows="3"></textarea>
-                </div>
-                <div class="form-group">
-                    <label for="livroCapa">Capa</label>
-                    <div class="upload-box">
-                        <span class="upload-icon">📷</span>
-                        <p>Clique ou arraste uma imagem</p>
-                    </div>
-                    <div class="image-preview">
-                        <div class="image-preview-placeholder">Sem imagem</div>
-                    </div>
-                </div>
-            </div>
-            <div class="modal-footer">
-                <button class="btn btn-primary">Cadastrar</button>
-                <button class="btn btn-secondary">Cancelar</button>
-            </div>
+      <div class="modal">
+        <div class="modal-header">
+          <h3 class="modal-title">Novo livro</h3>
+          <button class="modal-close">&times;</button>
         </div>
+        <div class="modal-body">
+          <div class="form-row">
+            <div class="form-group col-md-8">
+              <label for="livroTitulo">Título</label>
+              <input type="text" id="livroTitulo" class="form-control" />
+            </div>
+            <div class="form-group col-md-4">
+              <label for="livroAutor">Autor</label>
+              <select id="livroAutor" class="form-control">
+                <option value="">Procurar Autor</option>
+                <option value="1">ultima prueba</option>
+                <option value="2">cambiar el nombre !!!</option>
+                <option value="3">popopipipi</option>
+                <option value="4">Rogério</option>
+              </select>
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group col-md-4">
+              <label for="livroEditora">Editora</label>
+              <select id="livroEditora" class="form-control">
+                <option value="">Procurar Editora</option>
+                <option value="1">Nenhuma</option>
+                <option value="2">Torino Amyelin</option>
+                <option value="3">FTD</option>
+                <option value="4">Moderna</option>
+              </select>
+            </div>
+            <div class="form-group col-md-4">
+              <label for="livroMateria">Matéria</label>
+              <select id="livroMateria" class="form-control">
+                <option value="">Procurar Matéria</option>
+                <option value="1">Programação</option>
+                <option value="2">Web</option>
+                <option value="3">Matemática</option>
+                <option value="4">Literatura</option>
+              </select>
+            </div>
+            <div class="form-group col-md-4">
+              <label for="livroQuantidade">Quantidade</label>
+              <input
+                type="number"
+                id="livroQuantidade"
+                class="form-control"
+                min="1"
+              />
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group col-md-6">
+              <label for="livroPaginas">Quantidade de páginas</label>
+              <input
+                type="number"
+                id="livroPaginas"
+                class="form-control"
+                min="1"
+              />
+            </div>
+            <div class="form-group col-md-6">
+              <label for="livroAno">Ano de edição</label>
+              <input type="date" id="livroAno" class="form-control" />
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="livroDescricao">Descrição</label>
+            <textarea
+              id="livroDescricao"
+              class="form-control"
+              rows="3"
+            ></textarea>
+          </div>
+          <div class="form-group">
+            <label for="livroCapa">Capa</label>
+            <div class="upload-box">
+              <span class="upload-icon">📷</span>
+              <p>Clique ou arraste uma imagem</p>
+            </div>
+            <div class="image-preview">
+              <div class="image-preview-placeholder">Sem imagem</div>
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button class="btn btn-primary">Cadastrar</button>
+          <button class="btn btn-secondary">Cancelar</button>
+        </div>
+      </div>
     </div>
 
     <!-- Modal Empréstimo -->
     <div class="modal-backdrop" id="emprestimoModal">
-        <div class="modal">
-            <div class="modal-header">
-                <h3 class="modal-title">Emprestar livro</h3>
-                <button class="modal-close">&times;</button>
-            </div>
-            <div class="modal-body">
-                <div class="form-group">
-                    <label for="emprestimoLivro">Livro</label>
-                    <select id="emprestimoLivro" class="form-control">
-                        <option value="">Procurar livro</option>
-                        <option value="1">Java Script</option>
-                        <option value="2">HTML e CSS</option>
-                        <option value="3">A conquista da matemática</option>
-                        <option value="4">Maximus I</option>
-                    </select>
-                </div>
-                <div class="form-row">
-                    <div class="form-group col-md-8">
-                        <label for="emprestimoEstudante">Estudante</label>
-                        <select id="emprestimoEstudante" class="form-control">
-                            <option value="">Buscar Estudante</option>
-                            <option value="1">Lucas Silva</option>
-                            <option value="2">Natália Oliveira</option>
-                            <option value="3">Pedro Santos</option>
-                            <option value="4">Maria Souza</option>
-                            <option value="5">Angel Infantes</option>
-                        </select>
-                    </div>
-                    <div class="form-group col-md-4">
-                        <label for="emprestimoQuantidade">Quant.</label>
-                        <input type="number" id="emprestimoQuantidade" class="form-control" min="1" value="1">
-                    </div>
-                </div>
-                <div class="form-row">
-                    <div class="form-group col-md-6">
-                        <label for="emprestimoDataEmprestimo">Data do empréstimo</label>
-                        <input type="date" id="emprestimoDataEmprestimo" class="form-control">
-                    </div>
-                    <div class="form-group col-md-6">
-                        <label for="emprestimoDataDevolucao">Data da devolução</label>
-                        <input type="date" id="emprestimoDataDevolucao" class="form-control">
-                    </div>
-                </div>
-                <div class="form-group">
-                    <label for="emprestimoObservacao">Observação</label>
-                    <textarea id="emprestimoObservacao" class="form-control" rows="3"></textarea>
-                </div>
-            </div>
-            <div class="modal-footer">
-                <button class="btn btn-primary">Emprestar</button>
-                <button class="btn btn-secondary">Cancelar</button>
-            </div>
+      <div class="modal">
+        <div class="modal-header">
+          <h3 class="modal-title">Emprestar livro</h3>
+          <button class="modal-close">&times;</button>
         </div>
+        <div class="modal-body">
+          <div class="form-group">
+            <label for="emprestimoLivro">Livro</label>
+            <select id="emprestimoLivro" class="form-control">
+              <option value="">Procurar livro</option>
+              <option value="1">Java Script</option>
+              <option value="2">HTML e CSS</option>
+              <option value="3">A conquista da matemática</option>
+              <option value="4">Maximus I</option>
+            </select>
+          </div>
+          <div class="form-row">
+            <div class="form-group col-md-8">
+              <label for="emprestimoEstudante">Estudante</label>
+              <select id="emprestimoEstudante" class="form-control">
+                <option value="">Buscar Estudante</option>
+                <option value="1">Lucas Silva</option>
+                <option value="2">Natália Oliveira</option>
+                <option value="3">Pedro Santos</option>
+                <option value="4">Maria Souza</option>
+                <option value="5">Angel Infantes</option>
+              </select>
+            </div>
+            <div class="form-group col-md-4">
+              <label for="emprestimoQuantidade">Quant.</label>
+              <input
+                type="number"
+                id="emprestimoQuantidade"
+                class="form-control"
+                min="1"
+                value="1"
+              />
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group col-md-6">
+              <label for="emprestimoDataEmprestimo">Data do empréstimo</label>
+              <input
+                type="date"
+                id="emprestimoDataEmprestimo"
+                class="form-control"
+              />
+            </div>
+            <div class="form-group col-md-6">
+              <label for="emprestimoDataDevolucao">Data da devolução</label>
+              <input
+                type="date"
+                id="emprestimoDataDevolucao"
+                class="form-control"
+              />
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="emprestimoObservacao">Observação</label>
+            <textarea
+              id="emprestimoObservacao"
+              class="form-control"
+              rows="3"
+            ></textarea>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button class="btn btn-primary">Emprestar</button>
+          <button class="btn btn-secondary">Cancelar</button>
+        </div>
+      </div>
     </div>
 
     <!-- Modal Estudante -->
     <div class="modal-backdrop" id="estudanteModal">
-        <div class="modal">
-            <div class="modal-header">
-                <h3 class="modal-title">Novo estudante</h3>
-                <button class="modal-close">&times;</button>
-            </div>
-            <div class="modal-body">
-                <div class="form-row">
-                    <div class="form-group col-md-8">
-                        <label for="estudanteNome">Nome</label>
-                        <input type="text" id="estudanteNome" class="form-control">
-                    </div>
-                    <div class="form-group col-md-4">
-                        <label for="estudanteMatricula">Matrícula</label>
-                        <input type="text" id="estudanteMatricula" class="form-control">
-                    </div>
-                </div>
-                <div class="form-row">
-                    <div class="form-group col-md-6">
-                        <label for="estudanteEmail">Email</label>
-                        <input type="email" id="estudanteEmail" class="form-control">
-                    </div>
-                    <div class="form-group col-md-6">
-                        <label for="estudanteTelefone">Telefone</label>
-                        <input type="tel" id="estudanteTelefone" class="form-control">
-                    </div>
-                </div>
-                <div class="form-group">
-                    <label for="estudanteFoto">Foto</label>
-                    <div class="upload-box">
-                        <span class="upload-icon">📷</span>
-                        <p>Clique ou arraste uma imagem</p>
-                    </div>
-                    <div class="image-preview">
-                        <div class="image-preview-placeholder">Sem imagem</div>
-                    </div>
-                </div>
-            </div>
-            <div class="modal-footer">
-                <button class="btn btn-primary">Cadastrar</button>
-                <button class="btn btn-secondary">Cancelar</button>
-            </div>
+      <div class="modal">
+        <div class="modal-header">
+          <h3 class="modal-title">Novo estudante</h3>
+          <button class="modal-close">&times;</button>
         </div>
+        <div class="modal-body">
+          <div class="form-row">
+            <div class="form-group col-md-8">
+              <label for="estudanteNome">Nome</label>
+              <input type="text" id="estudanteNome" class="form-control" />
+            </div>
+            <div class="form-group col-md-4">
+              <label for="estudanteMatricula">Matrícula</label>
+              <input type="text" id="estudanteMatricula" class="form-control" />
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group col-md-6">
+              <label for="estudanteEmail">Email</label>
+              <input type="email" id="estudanteEmail" class="form-control" />
+            </div>
+            <div class="form-group col-md-6">
+              <label for="estudanteTelefone">Telefone</label>
+              <input type="tel" id="estudanteTelefone" class="form-control" />
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="estudanteFoto">Foto</label>
+            <div class="upload-box">
+              <span class="upload-icon">📷</span>
+              <p>Clique ou arraste uma imagem</p>
+            </div>
+            <div class="image-preview">
+              <div class="image-preview-placeholder">Sem imagem</div>
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button class="btn btn-primary">Cadastrar</button>
+          <button class="btn btn-secondary">Cancelar</button>
+        </div>
+      </div>
     </div>
 
     <!-- Modal Matéria -->
     <div class="modal-backdrop" id="materiaModal">
-        <div class="modal">
-            <div class="modal-header">
-                <h3 class="modal-title">Nova matéria</h3>
-                <button class="modal-close">&times;</button>
-            </div>
-            <div class="modal-body">
-                <div class="form-group">
-                    <label for="materiaNome">Nome</label>
-                    <input type="text" id="materiaNome" class="form-control">
-                </div>
-            </div>
-            <div class="modal-footer">
-                <button class="btn btn-primary">Cadastrar</button>
-                <button class="btn btn-secondary">Cancelar</button>
-            </div>
+      <div class="modal">
+        <div class="modal-header">
+          <h3 class="modal-title">Nova matéria</h3>
+          <button class="modal-close">&times;</button>
         </div>
+        <div class="modal-body">
+          <div class="form-group">
+            <label for="materiaNome">Nome</label>
+            <input type="text" id="materiaNome" class="form-control" />
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button class="btn btn-primary">Cadastrar</button>
+          <button class="btn btn-secondary">Cancelar</button>
+        </div>
+      </div>
     </div>
 
     <!-- Modal Administrador -->
     <div class="modal-backdrop" id="adminModal">
-        <div class="modal">
-            <div class="modal-header">
-                <h3 class="modal-title">Novo usuário</h3>
-                <button class="modal-close">&times;</button>
-            </div>
-            <div class="modal-body">
-                <div class="form-row">
-                    <div class="form-group col-md-8">
-                        <label for="adminNome">Nome</label>
-                        <input type="text" id="adminNome" class="form-control">
-                    </div>
-                    <div class="form-group col-md-4">
-                        <label for="adminPerfil">Perfil</label>
-                        <select id="adminPerfil" class="form-control">
-                            <option value="1">Administrador</option>
-                            <option value="2">Bibliotecário</option>
-                            <option value="3">Assistente</option>
-                        </select>
-                    </div>
-                </div>
-                <div class="form-row">
-                    <div class="form-group col-md-6">
-                        <label for="adminEmail">Email</label>
-                        <input type="email" id="adminEmail" class="form-control">
-                    </div>
-                    <div class="form-group col-md-6">
-                        <label for="adminSenha">Senha</label>
-                        <input type="password" id="adminSenha" class="form-control">
-                    </div>
-                </div>
-                <div class="form-group">
-                    <label for="adminFoto">Foto</label>
-                    <div class="upload-box">
-                        <span class="upload-icon">📷</span>
-                        <p>Clique ou arraste uma imagem</p>
-                    </div>
-                    <div class="image-preview">
-                        <div class="image-preview-placeholder">Sem imagem</div>
-                    </div>
-                </div>
-            </div>
-            <div class="modal-footer">
-                <button class="btn btn-primary">Cadastrar</button>
-                <button class="btn btn-secondary">Cancelar</button>
-            </div>
+      <div class="modal">
+        <div class="modal-header">
+          <h3 class="modal-title">Novo usuário</h3>
+          <button class="modal-close">&times;</button>
         </div>
+        <div class="modal-body">
+          <div class="form-row">
+            <div class="form-group col-md-8">
+              <label for="adminNome">Nome</label>
+              <input type="text" id="adminNome" class="form-control" />
+            </div>
+            <div class="form-group col-md-4">
+              <label for="adminPerfil">Perfil</label>
+              <select id="adminPerfil" class="form-control">
+                <option value="1">Administrador</option>
+                <option value="2">Bibliotecário</option>
+                <option value="3">Assistente</option>
+              </select>
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group col-md-6">
+              <label for="adminEmail">Email</label>
+              <input type="email" id="adminEmail" class="form-control" />
+            </div>
+            <div class="form-group col-md-6">
+              <label for="adminSenha">Senha</label>
+              <input type="password" id="adminSenha" class="form-control" />
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="adminFoto">Foto</label>
+            <div class="upload-box">
+              <span class="upload-icon">📷</span>
+              <p>Clique ou arraste uma imagem</p>
+            </div>
+            <div class="image-preview">
+              <div class="image-preview-placeholder">Sem imagem</div>
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button class="btn btn-primary">Cadastrar</button>
+          <button class="btn btn-secondary">Cancelar</button>
+        </div>
+      </div>
     </div>
     <script src="script.js"></script>
-</body>
-
+  </body>
 </html>
