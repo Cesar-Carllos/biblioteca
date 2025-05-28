@@ -441,7 +441,7 @@ function renderBooksList() {
             <td><span class="status-badge">${book.status}</span></td>
             <td class="actions">
                 <button class="action-button edit-button" onclick="openEditBookModal(${book.id})">✏️</button>
-                <button class="action-button delete-button" onclick="confirmRemoveStudent(${book.id})">🗑️</button>
+                <button class="action-button delete-button" onclick="confirmRemoveBook(${book.id})">🗑️</button>
             </td>
         `;
     tableBody.appendChild(row);
@@ -481,7 +481,7 @@ function renderStudentList() {
             <td><span class="status-badge">${student.status}</span></td>
             <td class="actions">
                 <button class="action-button edit-button" onclick="openEditStudentModal(${student.id})">✏️</button>
-                <button class="action-button delete-button" onclick="confirmRemoveBook(${student.id})">🗑️</button>
+                <button class="action-button delete-button" onclick="confirmRemoveStudent(${student.id})">🗑️</button>
             </td>
         `;
     tableBody.appendChild(row);
